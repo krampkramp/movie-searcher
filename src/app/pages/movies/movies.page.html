@@ -8,7 +8,7 @@
 <ion-searchbar color="dark" showCancelButton="focus" cancelButtonText="Custom Cancel" (ionChange)="searchChanged($event)" placeholder="Movie searcher"></ion-searchbar>
 
     <ion-list *ngIf="results">
-      <ion-item button *ngFor="let movie of results" >
+      <ion-item button *ngFor="let movie of results" [routerLink]="['/movie-details', movie.imdbID]" >
       <ion-label text-wrap>
         <h3>{{ movie.Title }}</h3>
       </ion-label>
