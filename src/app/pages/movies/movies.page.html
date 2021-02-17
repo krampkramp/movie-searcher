@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Movies Searcher</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+<ion-searchbar color="dark" showCancelButton="focus" cancelButtonText="Custom Cancel" (ionChange)="searchChanged($event)" placeholder="Movie searcher"></ion-searchbar>
+
+    <ion-list *ngIf="results">
+      <ion-item button *ngFor="let movie of results" >
+      <ion-label text-wrap>
+        <h3>{{ movie.Title }}</h3>
+      </ion-label>
+      </ion-item>
+    </ion-list>
+
+</ion-content>
