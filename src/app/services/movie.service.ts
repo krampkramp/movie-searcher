@@ -4,8 +4,8 @@ import { Observable } from 'rxjs';
 
 import {apiKey} from '../shared/constants/constants';
 
-import { Movie } from '../modals/Movie.modal';
-import { MovieDetail } from "../modals/MovieDetail.modal";
+import { Movie } from '../models/Movie.model';
+import { MovieDetail } from "../models/MovieDetail.model";
 
 @Injectable({
   providedIn: 'root'
